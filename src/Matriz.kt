@@ -1,7 +1,7 @@
 fun main() {
-    var cad = "9 8 7\n"+
-              "5 3 2\n"+
-              "6 6 7\n "
+    var cad = "9 8 7 6\n"+
+              "5 3 2 6\n"+
+              "6 6 7 5\n "
     val Marray = ArrayList<ArrayList<Char>>()
     var contCol : Int = 0
 
@@ -15,8 +15,10 @@ fun main() {
 
     cad.forEach {
         if (!it.isWhitespace()){
-            Marray[contCol].add(it)
+            Marray[contFil].add(it)
+
             contCol++
+
         }
         if (it == '\n'){
             contCol=0
