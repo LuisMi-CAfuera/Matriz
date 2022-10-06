@@ -3,21 +3,24 @@ fun main() {
               "5 3 2 6\n"+
               "6 6 7 5\n "
     val Marray = ArrayList<ArrayList<Char>>()
-
+    var cont = 0
     cad.forEach {
         if (it == '\n'){
+            println(cont)
             Marray.add(ArrayList())
+            cont++
         }
+
     }
 
-    Marray.add(ArrayList())
     var contFil : Int = 0
     var contCol : Int = 0
 
     cad.forEach {
         if (!it.isWhitespace()){
-            Marray[contFil].add(it)
 
+
+            Marray[contFil].add(it)
             contCol++
 
         }
@@ -28,13 +31,11 @@ fun main() {
     }
 
 
-    contFil=0
-    Marray.forEach{
-        println(Marray[contFil])
-        contFil++
-    }
+    //println(contFil)
+    //println(contCol)
 
-    impMatriz(Marray,contFil)
+
+    impMatriz(Marray,contCol)
 }
 fun impMatriz(Marray:ArrayList<ArrayList<Char>>, contCol: Int){
     print("   ")
