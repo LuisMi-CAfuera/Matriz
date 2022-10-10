@@ -16,7 +16,7 @@ fun main() {
     var contFil : Int = 0
     var contCol : Int = 0
     var contCol2 : Int = 0
-    println("----------------------")
+
     cad.forEach {
         if (!it.isWhitespace()){
 
@@ -25,17 +25,15 @@ fun main() {
             contCol++
 
         }
-        contCol2=contCol
+        contCol2=contCol//Aunque parezaca una tonteria esta variable no lo es ya que como no se por que no
+                        // cogia la variable de columna la iguale antes de que se ponga en
+                        // 0 de nuevo y luego lo pongo en el metodo esa es la forma que encontre para que funcionase
         if (it == '\n'){
             contCol=0
             contFil++
         }
     }
-    println("----------------------")
-    println(contCol)
 
-    //println(contFil)
-    //println(contCol)
 
 
     impMatriz(Marray,contCol2)
